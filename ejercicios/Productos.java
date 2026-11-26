@@ -46,6 +46,10 @@ public class Productos {
 	}
 	
 	public static void mostrarProductoMasBarato(){
+		if (nombreProductos.isEmpty()) {
+			System.out.println("No hay productos");
+			return;
+		}
 		double precioMasBarato = 1_000_000_000;
 		int posicionMasBarato  = -1;
 		for (int i = 0; i < precioProductos.size(); i++) {
@@ -60,6 +64,10 @@ public class Productos {
 	}
 	
 	public static void mostrarProductoMasCaro(){
+		if (nombreProductos.isEmpty()) {
+			System.out.println("No hay productos");
+			return;
+		}
 		double precioMasCaro = 0;
 		int posicionMasCaro  = -1;
 		for (int i = 0; i < precioProductos.size(); i++) {
@@ -113,6 +121,8 @@ public class Productos {
 		} 
 		System.out.println("NO existe el producto");
 	}
+	
+	
 	
 	public static void buscarProducto() {
 		scanner.nextLine(); //limpiamos el salto de línea de opcion = scanner.nextInt();
